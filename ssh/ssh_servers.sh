@@ -1,10 +1,10 @@
 #!/bin/bash
 
-KEY=~/.ec2/splunk-test.pem
-USER=ubuntu
-for S in `cat ~/ssh_servers/servers.txt` ; do
-       ssh -i $KEY $USER@$S "sudo chef-client"
-done
+#KEY=~/.ec2/splunk-test.pem
+#USER=ubuntu
+#for S in `cat ~/ssh_servers/servers.txt` ; do
+      # ssh -i $KEY $USER@$S "sudo chef-client"
+#done
 
 ######## OR ###########
 
