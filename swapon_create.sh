@@ -1,12 +1,11 @@
 #!/bin/bash
 
 #Create the Swap File
-sudo fallocate -l 2g /mnt/2GiB.swap
-sudo chmod 600 /mnt/2GiB.swap
-sudo mkswap /mnt/2GiB.swap
+fallocate -l 4g /mnt/4GiB.swap
+chmod 600 /mnt/4GiB.swap
+mkswap /mnt/4GiB.swap
 #Enable use of Swap File
-sudo swapon /mnt/2GiB.swap
+swapon /mnt/4GiB.swap
 cat /proc/swaps 
 #Enable Swap File at Bootup
-echo '/mnt2GiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
-
+echo '/mnt4GiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
